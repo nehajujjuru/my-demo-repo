@@ -1,0 +1,55 @@
+<mat-card class="payment">
+    <form (ngSubmit)="paymentFormSubmit()" [formGroup]="paymentForm">
+      <mat-card-title  class="section-header">PAYMENT FORM</mat-card-title>
+      <mat-card-content fxLayoutAlign="space-between center" fxLayout="column">
+        <mat-form-field fxFlexAlignfxFlex="1 1 70%">
+          <input  autocomplete="username" matInput placeholder="First Name"
+            formControlName="fName">
+          <mat-error class="error-message" >
+            This field is required
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field fxFlex="1 1 70%">
+          <input  autocomplete="username" matInput placeholder="Last Name"
+            formControlName="lName">
+          <mat-error class="error-message">
+            This field is required
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field fxFlex="1 1 70%">
+          <input matInput placeholder="Email Address"
+            formControlName="emailAddress" required>
+          <mat-error class="error-message" >
+            Please enter the correct emailAddress
+          </mat-error>
+        </mat-form-field>
+
+
+        <mat-form-field fxFlex="1 1 70%">
+                  <input matInput type="number"
+                    maxlength="10" placeholder="phoneNumber"
+                    formControlName="phoneNumber" required>
+                  <mat-error class="error-message" >
+                   This field is required
+                  </mat-error>
+        </mat-form-field>
+
+        <mat-form-field fxFlex="1 1 70%">
+          <input matInput type="number"
+            maxlength="10" placeholder="amount"
+            formControlName="amount" required>
+          <mat-error class="error-message" >
+           This field is required
+          </mat-error>
+       </mat-form-field>
+      </mat-card-content>
+     
+      <mat-card-content fxLayoutGap="20px" fxLayoutAlign="center center">
+        <button 
+          data-automation="login-button"
+          mat-raised-button type="submit" color="primary">
+          <span>submit</span>
+        </button>
+      </mat-card-content>
+    </form>
+  </mat-card>
